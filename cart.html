@@ -1,0 +1,23 @@
+<div class="container bg-white">
+	<div class="row">
+		<div class="col-md-12 page-header" style="margin-top: 0;">
+			<h1 class="pull-left">Cart</h1>
+		</div>
+	</div>
+	<div ng-repeat="item in cartItems" class="product-block row">
+		<div class="col-md-3">
+			<img src="{{item.img}}" class="prod-img"/>
+		</div>
+		<div class="col-md-3 prod-title">{{item.name}}</div>
+		<div class="col-md-3">${{item.price}}</div>
+		<div class="col-md-3">
+			<button class="btn btn-primary" ng-click="removeFromCart($index)">Remove</button>
+		</div>
+	</div>
+	<div class="total-price text-center" ng-if="cartItems.length">Total: ${{sumPrice()}}</div>
+	<div class="text-center empty-cart" ng-if="!cartItems.length">
+		<img src="http://img1a.flixcart.com/www/linchpin/fk-cp-zion/img/empty-cart_ee6141.png">
+		<p>Your Shopping Cart is empty</p>
+		<a class="btn btn-primary" href="#">Continue Shopping</a>
+	</div>
+</div>

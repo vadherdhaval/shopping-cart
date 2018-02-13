@@ -1,0 +1,92 @@
+body{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 13px;
+	color: rgba(0,0,0,0.55);
+	padding-top: 78px;
+	background: #f1f3f6;
+}
+.bg-white{
+	background: white;
+	box-shadow: 0 1px 3px -1px rgba(0, 0, 0, .4);
+}
+.product-block{
+	border-bottom: 1px solid #f0f0f0;
+	padding: 24px 0 30px;
+}
+.p-15{
+	padding: 15px;
+}
+header{
+	background: #4458b4;
+	color: white;
+	height: 58px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	padding: 15px 0;
+}
+header h1{
+	font-size: 22px;
+	font-weight: 500;
+	margin: 0;
+}
+header i.zmdi{
+	margin-right: 5px;
+}
+
+.zmdi{
+	font-size: 24px;
+}
+.prod-img{
+	max-height: 200px;
+}
+.prod-title{
+	font-size: 18px;
+	font-weight: 500;
+	color: rgba(0,0,0,0.8);
+}
+.cart-icon{
+	position: relative;
+	color: white;
+	line-height: 24px;
+	font-weight: 500;
+}
+.cart-icon i{
+	vertical-align: middle;
+}
+.cart-icon:hover,.cart-icon:focus{
+	color: white;
+	text-decoration: none;
+}
+.cart-icon span{
+	position: absolute;
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	background: #ff6161;
+	color: #fff;
+	text-align: center;
+	line-height: 16px;
+	border: 1px solid white;
+	font-weight: 500;
+	font-size: 11px;
+	bottom: 12px;
+	left: 10px;
+}
+.total-price{
+	padding: 30px;
+	font-size: 18px;
+	font-weight: 500;
+	color: rgba(0,0,0,0.8);
+}
+.empty-cart{
+	font-size: 18px;
+	font-weight: 500;
+	padding-bottom: 30px;
+}
+.empty-cart img{
+	height: 150px;
+	margin-bottom: 20px;
+}

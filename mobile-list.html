@@ -1,0 +1,31 @@
+<div class="mobile-list">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="bg-white p-15">
+					<div ng-repeat="item in items">
+						<input type="checkbox" ng-model="filterItems[item.name]"/> {{item.name}}
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="scrollable-page bg-white">
+					<div class="clearfix">
+						<div class="col-md-12 page-header" style="margin-top: 0;">
+							<h1 class="pull-left">Mobile List</h1>
+						</div>
+					</div>
+					<!-- List of mobiles -->
+					<div infinite-scroll="increaseLimit()" infinite-scroll-container='".scrollable-page"'>
+						<div class="product-block clearfix" ng-repeat="mobile in mobilesList | orderBy:propertyName:reverse | filter:selectionFilter | limitTo:firstLoadItem">
+							<div class="col-md-3"><img src="{{mobile.img}}" class="prod-img" /></div>
+							<div class="col-md-3 prod-title">{{mobile.name}}</div>
+							<div class="col-md-3">${{mobile.price}}</div>
+							<button class="btn btn-primary" ng-click="addToCart(mobile)">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
